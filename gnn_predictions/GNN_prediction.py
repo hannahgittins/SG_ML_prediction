@@ -10,7 +10,7 @@ import torch
 from graph_dataset import SMILESDataset
 from torch_geometric.loader import DataLoader
 
-sys.path.append("..\\")
+sys.path.append("../")
 from gnn.MPNN_model import MP_model
 
 
@@ -48,7 +48,7 @@ def test_model(
     test_dataset: object,
     coord: bool = False,
     device: str = "cpu",
-    label_file_path: str = "label_dict\\All_organics_opt_molecular_graphs_coord_label_dict.pickle",
+    label_file_path: str = "label_dict/All_organics_opt_molecular_graphs_coord_label_dict.pickle",
     mp_layers: int = 3,
     edge_layers: int = 1,
     fcc_in_gnn: int = 2,
@@ -86,9 +86,9 @@ def test_model(
 
     """
     if coord:
-        model_file_path = "models\\gnn_2_coord_model.pt"
+        model_file_path = "models/gnn_2_coord_model.pt"
     else:
-        model_file_path = "models\\gnn_1_model.pt"
+        model_file_path = "models/gnn_1_model.pt"
 
     test_loader = DataLoader(
         test_dataset, batch_size=1, pin_memory=False, shuffle=False
@@ -136,7 +136,7 @@ def make_dataset(
     smiles: Union[list[str], str],
     working_directory: str,
     coord: bool = False,
-    label_file_path: str = "label_dict\\All_organics_opt_molecular_graphs_coord_label_dict.pickle",
+    label_file_path: str = "label_dict/All_organics_opt_molecular_graphs_coord_label_dict.pickle",
 ) -> object:
     """Make dataset from smiles list.
 
