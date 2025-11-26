@@ -1,4 +1,4 @@
-"""Prediciton of space group from GNN_1 -> GNN without coordinates."""
+"""Prediciton of space group from GNN_1 or GNN_2."""
 
 import os
 import pickle
